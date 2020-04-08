@@ -25,19 +25,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    
-    - name: Hello world
-      run: echo Hello world $FIRST_NAME $middle_name $Last_Name!
-      env:
-        FIRST_NAME: Mona
-        middle_name: The
-        Last_Name: Octocat
-    
+  
     - name: Install Dependencies and Env varible 
-    - env:
-        BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
       run: |
-        export BACKEND_SECRET='$BACKEND_SECRET'
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
