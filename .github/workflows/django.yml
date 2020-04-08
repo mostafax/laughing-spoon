@@ -26,7 +26,8 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies and Env varible 
-      SUPER_SECRET: ${{ secrets.BACKEND_SECRET }}
+    - env:
+        BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
       run: |
         export BACKEND_SECRET='$BACKEND_SECRET'
         python -m pip install --upgrade pip
