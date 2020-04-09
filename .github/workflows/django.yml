@@ -31,7 +31,7 @@ jobs:
         BACKEND_SECRET: ${{ secrets.BACKEND_SECRET }}
       shell: bash
       run: |
-        export BACKEND_SECRET = $BACKEND_SECRET
+        export BACKEND_SECRET = '$BACKEND_SECRET'
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
